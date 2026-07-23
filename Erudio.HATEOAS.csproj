@@ -12,7 +12,7 @@
     <PackageTags>HATEOAS</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <PackageIcon>icon-Nuget.png</PackageIcon>
-	  <Version>10.0.301.4</Version>
+	  <Version>10.0.301.5</Version>
   </PropertyGroup>
 
 	<ItemGroup>
