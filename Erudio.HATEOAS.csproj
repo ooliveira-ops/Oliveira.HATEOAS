@@ -11,7 +11,6 @@
 	 <RepositoryUrl>https://github.com/ooliveira-ops/Oliveira.HATEOAS</RepositoryUrl>
     <PackageTags>HATEOAS</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <Version>10.0.301.3</Version>
 	  <PackageIcon>icon-Nuget.png</PackageIcon>
 	  <Version>10.0.301.4</Version>
   </PropertyGroup>
