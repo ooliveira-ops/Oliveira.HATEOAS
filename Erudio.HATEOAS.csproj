@@ -4,6 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	 <PackageId>Oliveira.HATEOAS</PackageId>
     <Description>A library to implement HATEOAS pattern in RESTful APIs, developed for study purposes based on the Erudio course.</Description>
     <Copyright>Copyright © Filipe Oliveira 2026</Copyright>
     <PackageProjectUrl>https://github.com/ooliveira-ops/Erudio.HATEOAS</PackageProjectUrl>

@@ -18,3 +18,41 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 10.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore 
+      
+    - name: Build
+      run: dotnet build --no-restore 
+
+    - name: Change .csproj version
+      run: |                        # "|" porque ira ser executado mais de um comando
+        cd ./Erudio.HATEOAS/
+        
+        # Increment version in your project file (e.g., .csproj)
+        # Replace the placeholder with your actual project file name
+        PROJECT_FILE=Erudio.HATEOAS.csproj
+        CURRENT_VERSION=$(grep -oP '<Version>\K[^<]+' $PROJECT_FILE)
+        NEW_VERSION=$(echo $CURRENT_VERSION | awk -F. '{$NF+=1; OFS="."; print $0}')
+
+        # Replace spaces with dots
+        NEW_VERSION=$(echo $NEW_VERSION | tr ' ' '.')
+
+        # Update the version in the project file
+        sed -i "s|<Version>$CURRENT_VERSION</Version>|<Version>$NEW_VERSION</Version>|" $PROJECT_FILE
+
+        # Commit the version change
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "Increment version to $NEW_VERSION"  -a
+        git push
+
+    - name: Generate Release
+      run: dotnet build -c release
+
+    - name: Generate Nuget Package
+      run: dotnet pack -c release -o ./dist/     
+
+    - name: Push Nuget Package
+      run: dotnet nuget push "./dist/*" -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json
+
