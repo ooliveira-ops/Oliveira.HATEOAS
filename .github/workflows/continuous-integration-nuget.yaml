@@ -27,7 +27,6 @@ jobs:
 
     - name: Change .csproj version
       run: |                        # "|" porque ira ser executado mais de um comando
-        cd ./Erudio.HATEOAS/
         
         # Increment version in your project file (e.g., .csproj)
         # Replace the placeholder with your actual project file name
