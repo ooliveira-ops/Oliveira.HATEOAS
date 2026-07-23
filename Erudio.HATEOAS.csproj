@@ -11,7 +11,7 @@
     <RepositoryUrl>https://github.com/ooliveira-ops/Erudio.HATEOAS</RepositoryUrl>
     <PackageTags>HATEOAS</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	  <Version>10.0.301.1</Version>
+	  <Version>10.0.301.2</Version>
   </PropertyGroup>
 
 	<ItemGroup>
