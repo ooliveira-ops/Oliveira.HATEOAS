@@ -21,7 +21,7 @@ Install-Package Oliveira.HATEOAS -Version 10.0.301.4
 
 ### NuGet Package Manager
 
-![NuGet Package Manager](docs/images/nuget-search.png)
+![NuGet Package Manager](images/Nuget-Search.png)
 
 ---
 
