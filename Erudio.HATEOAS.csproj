@@ -13,7 +13,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	  <PackageIcon>icon-Nuget.png</PackageIcon>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <Version>10.0.301.4</Version>
+	  <Version>10.0.301.5</Version>
   </PropertyGroup>
 
 	<ItemGroup>
